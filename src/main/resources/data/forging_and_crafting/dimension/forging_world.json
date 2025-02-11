@@ -6,7 +6,7 @@
       "type": "minecraft:multi_noise",
       "biomes": [
         {
-          "biome": "forging_and_crafting:forging_world_swqx",
+          "biome": "forging_and_crafting:forging_world_biome",
           "parameters": {
             "temperature": [
               -0.5,
@@ -425,7 +425,7 @@
             "if_true": {
               "type": "minecraft:biome",
               "biome_is": [
-                "forging_and_crafting:forging_world_swqx"
+                "forging_and_crafting:forging_world_biome"
               ]
             },
             "then_run": {

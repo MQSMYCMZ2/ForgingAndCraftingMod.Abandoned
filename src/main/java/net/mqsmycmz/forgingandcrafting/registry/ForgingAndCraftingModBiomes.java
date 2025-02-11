@@ -47,7 +47,7 @@ import net.mqsmycmz.forgingandcrafting.registry.ForgingAndCraftingModBlocks;
 public class ForgingAndCraftingModBiomes {
 	public static final DeferredRegister<Biome> REGISTRY = DeferredRegister.create(ForgeRegistries.BIOMES, ForgingAndCraftingMod.MODID);
 	public static final RegistryObject<Biome> ECONOMIC_CLUSTER = REGISTRY.register("economic_cluster", EconomicClusterBiome::createBiome);
-	public static final RegistryObject<Biome> FORGING_WORLD_SWQX = REGISTRY.register("forging_world_swqx", ForgingWorldBiome::createBiome);
+	public static final RegistryObject<Biome> FORGING_WORLD_BIOME = REGISTRY.register("forging_world_biome", ForgingWorldBiome::createBiome);
 
 	@SubscribeEvent
 	public static void onServerAboutToStart(ServerAboutToStartEvent event) {
