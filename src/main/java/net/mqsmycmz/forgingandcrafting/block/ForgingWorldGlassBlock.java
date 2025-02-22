@@ -10,12 +10,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
+import net.mqsmycmz.forgingandcrafting.registry.ForgingAndCraftingModItems;
 
 import java.util.List;
 import java.util.Collections;
 
-public class ForgingWorldGlassBlockBlock extends Block {
-	public ForgingWorldGlassBlockBlock() {
+public class ForgingWorldGlassBlock extends Block {
+	public ForgingWorldGlassBlock() {
 		super(BlockBehaviour.Properties.of(Material.GRASS).sound(SoundType.GRAVEL).strength(1f, 10f));
 	}
 
@@ -27,8 +28,10 @@ public class ForgingWorldGlassBlockBlock extends Block {
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
+		if (!dropsOriginal.isEmpty()) {
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
+		} else {
+			return Collections.singletonList(new ItemStack(ForgingAndCraftingModItems.FORGING_WORLD_GLASS_BLOCK.get()));
+		}
 	}
 }

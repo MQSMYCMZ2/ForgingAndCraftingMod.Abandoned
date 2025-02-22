@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 
-version = '2.0.1-1.19.2'
+version = '2.0.2-1.19.2'
 group = 'net.mqsmycmz.forging_and_crafting'
 archivesBaseName = 'forging_and_crafting'
 

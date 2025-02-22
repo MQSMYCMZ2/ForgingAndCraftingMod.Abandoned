@@ -29,8 +29,11 @@ public class NetherNuggetBlockBlock extends Block {
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
+		if (!dropsOriginal.isEmpty()) {
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(ForgingAndCraftingModItems.NETHER_NUGGET.get()));
+		} else {
+			return Collections.singletonList(new ItemStack(ForgingAndCraftingModItems.NETHER_NUGGET.get()));
+
+		}
 	}
 }

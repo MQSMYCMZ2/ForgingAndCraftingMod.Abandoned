@@ -8,15 +8,15 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
+import net.mqsmycmz.forgingandcrafting.registry.ForgingAndCraftingModItems;
 
 import java.util.List;
 import java.util.Collections;
 
-public class EconomicClusterGlassBlockBlock extends Block {
-	public EconomicClusterGlassBlockBlock() {
+public class EconomicClusterGlassBlock extends Block {
+	public EconomicClusterGlassBlock() {
 		super(BlockBehaviour.Properties.of(Material.GRASS).sound(SoundType.GRAVEL).strength(1f, 10f));
 	}
 
@@ -28,8 +28,10 @@ public class EconomicClusterGlassBlockBlock extends Block {
 	@Override
 	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
+		if (dropsOriginal.isEmpty()) {
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(Items.EXPERIENCE_BOTTLE, 2));
+		} else {
+			return Collections.singletonList(new ItemStack(ForgingAndCraftingModItems.ECONOMIC_CLUSTER_GLASS_BLOCK.get()));
+		}
 	}
 }
